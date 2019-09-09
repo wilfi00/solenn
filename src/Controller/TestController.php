@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class TestController extends AbstractController
@@ -17,9 +18,9 @@ class TestController extends AbstractController
 	 * 	name="trololo"
 	 * 	)
 	 */
-	public function init($id)
+	public function init(Request $request, $id)
 	{
-		return new Response('Coucou johan :) ' . $id);
+		return new Response('<body>Coucou johan :) ' . $id . '</body>');
 	}
 
 }
